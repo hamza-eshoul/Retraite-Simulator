@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Briefcase, GraduationCap, ArrowRight, Calculator } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 type ProfessionType = "profession_liberale" | "salarie";
 
 const Processing = () => {
+  const navigate = useNavigate();
   const [selectedProfession, setSelectedProfession] =
     useState<ProfessionType>("salarie");
 
@@ -12,8 +14,7 @@ const Processing = () => {
   };
 
   const handleContinue = () => {
-    // Navigate to simulator based on selected profession
-    console.log(`Navigating to simulator for: ${selectedProfession}`);
+    navigate("/simulator/" + selectedProfession);
   };
 
   return (
