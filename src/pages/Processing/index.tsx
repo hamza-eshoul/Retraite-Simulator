@@ -138,7 +138,7 @@ const Processing = () => {
                       Professions libérales :
                     </span>
                     <p className="mt-1 leading-relaxed">
-                      Elles peuvent déduire jusqu'à 10 % de leur revenu global
+                      Possibilité de déduire jusqu'à 10 % du revenu global
                       imposable au titre des cotisations versées sur un contrat
                       de retraite, à condition de remplir deux critères en cas
                       de rachat :
