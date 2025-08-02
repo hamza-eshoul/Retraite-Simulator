@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Briefcase, GraduationCap, ArrowRight, Calculator } from "lucide-react";
 
 type ProfessionType = "profession_liberale" | "salarie";
@@ -7,14 +6,14 @@ type ProfessionType = "profession_liberale" | "salarie";
 const Processing = () => {
   const [selectedProfession, setSelectedProfession] =
     useState<ProfessionType>("salarie");
-  const navigate = useNavigate();
 
   const handleProfessionSelect = (profession: ProfessionType) => {
     setSelectedProfession(profession);
   };
 
   const handleContinue = () => {
-    navigate(`/simulator/${selectedProfession}`);
+    // Navigate to simulator based on selected profession
+    console.log(`Navigating to simulator for: ${selectedProfession}`);
   };
 
   return (
@@ -68,7 +67,7 @@ const Processing = () => {
                 Salarié
               </h3>
 
-              <div className="space-y-3 text-sm text-slate-600">
+              <div className="space-y-4 text-sm text-slate-600">
                 <div className="flex items-start gap-2">
                   <span className="text-green-500 font-bold">✅</span>
                   <div>
@@ -93,6 +92,15 @@ const Processing = () => {
                       </li>
                     </ul>
                   </div>
+                </div>
+
+                {/* Warning Section */}
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mt-4">
+                  <p className="text-sm text-red-700">
+                    <span className="font-medium">Important :</span> Si les deux
+                    conditions ne sont pas respectées, une retenue à la source
+                    non-libératoire de 15% sera appliquée.
+                  </p>
                 </div>
               </div>
             </div>
@@ -130,7 +138,7 @@ const Processing = () => {
                 Profession Libérale
               </h3>
 
-              <div className="space-y-3 text-sm text-slate-600">
+              <div className="space-y-4 text-sm text-slate-600">
                 <div className="flex items-start gap-2">
                   <span className="text-green-500 font-bold">✅</span>
                   <div>
@@ -138,7 +146,7 @@ const Processing = () => {
                       Professions libérales :
                     </span>
                     <p className="mt-1 leading-relaxed">
-                      Possibilité de déduire jusqu'à 10 % du revenu global
+                      Elles peuvent déduire jusqu'à 10 % de leur revenu global
                       imposable au titre des cotisations versées sur un contrat
                       de retraite, à condition de remplir deux critères en cas
                       de rachat :
@@ -156,6 +164,15 @@ const Processing = () => {
                       </li>
                     </ul>
                   </div>
+                </div>
+
+                {/* Warning Section */}
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mt-4">
+                  <p className="text-sm text-red-700">
+                    <span className="font-medium">Important :</span> Si les deux
+                    conditions ne sont pas respectées, une retenue à la source
+                    non-libératoire de 15% sera appliquée.
+                  </p>
                 </div>
               </div>
             </div>
