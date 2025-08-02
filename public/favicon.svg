@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <path 
+    d="M16 4L28 10L16 16L4 10L16 4Z" 
+    fill="#053246"
+  />
+  <path 
+    d="M10 12V18L16 21L22 18V12" 
+    fill="#053246"
+    stroke="#053246"
+    stroke-width="1"
+  />
+  
+  <circle 
+    cx="16" 
+    cy="24" 
+    r="4" 
+    fill="#053246"
+  />
+  
+  <path 
+    d="M24 22L28 26M28 26L24 30M28 26H20" 
+    stroke="#053246"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+</svg>
